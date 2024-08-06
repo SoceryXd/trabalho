@@ -1,0 +1,62 @@
+
+body{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 320px;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item.active img {
+    opacity: 1;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.carousel-item:hover .bio-container {
+    opacity: 1;
+    transform: translateY(0);
+}
